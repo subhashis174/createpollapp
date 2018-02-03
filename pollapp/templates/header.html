@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+	{% block titlecontent %}
+	{% endblock%}
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- Latest compiled and minified CSS -->
+<!--<link rel="stylesheet" href="{% static 'css/bootstrapv1.css' %}">-->
+
+<!-- jQuery library -->
+<!--<script src="{% static 'js/jqueryv1.js' %}"></script>-->
+
+<!-- Latest compiled JavaScript -->
+<!--<script src="{% static 'js/bootstrapv1.js' %}"></script>-->
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static 'webfonts/css/font-awesome.min.css'  %}">
+<style type="text/css">
+@font-face {
+    font-family: myFirstFont;
+    src: url({% static 'webfonts/fa-brands-400.woff' %});
+}
+body{
+	margin: 0px !important;
+	padding : 0px !important;
+}
+@media only screen and (max-width: 500px) {
+	/* styling for index page starts here */
+	.welcomebody{
+	background-color: #221F1F;
+	height: 100%;
+	margin-top: 0px !important;
+	width: 100% !important;
+	}
+	.loginbtn{
+		width: 95% !important;
+	}
+	.navbar-inverse{
+		border: 0px !important;
+		background-color: #221F1F;
+	}
+	.headerlinks{
+		font-size: 150% !important;
+		padding: 20px !important;
+	}
+	/* styling for index page starts here */
+	/* styling for navbar starts here */
+	.desktop{
+		visibility: hidden !important;
+		display: none !important;
+	}
+	.mobilesearch{
+		width: 100% !important;
+	}
+	.srchcontrol{
+		width: 100% !important;
+	}
+	.mobile-nav-links{
+		width: 100% !important;
+		margin-top: 7px !important;
+		margin-bottom: 7px !important;
+		/*background-color: white !important;*/
+	}
+	.mobile-nav-item{
+		padding-left: 9% !important;
+		margin-left: 2% !important;
+		width: 20% !important;
+		color: white !important;
+	}
+	/* styling for navbar ends here */
+	/* styling for newsfeed starts here */
+	.newsfeedbody{
+		margin-left: 0% !important;
+		margin-right: 0% !important;
+		
+	}
+	.newsfeed_ques{
+	border-bottom: 1px solid #D1D1D1;
+	border:1px solid #E5F5DB;
+	background-color: #FFFFFF;
+	border-radius: 4px;
+	margin-bottom: 5px !important;
+	}
+	.newsfeedbody{
+		background-color: #FAFAFA !important;
+	}
+	/* styling for newsfeed ends here*/
+}
+@media only screen and (min-width: 768px) {
+	/* styling for index page starts here */
+	.loginbtn{
+		padding-left: 10% !important;
+		margin-top: 10% !important;
+	}
+	.subsection{
+		margin-top: 10% !important;
+	}
+	.row{
+		width: 99% !important;
+	}
+	.headerlinks{
+		font-size: 200% !important;
+	}
+	#myNavbar{
+		margin-right: 10%;
+	}
+	.navbar-inverse{
+		border: 0px !important;
+		background-color: #221F1F;
+	}
+	.welcomebody{
+	background-color: #221F1F;
+	height: 100%;
+	margin-top: 0px !important;
+	}
+	/* styling for index page ends here */
+	/* styling for navbar starts here */
+	.srchcontrol{
+		width: 500px !important;
+	}
+	.mobile{
+		visibility: hidden;
+		display: none;
+	}
+	/* styling for navbar ends here*/
+	/* styling for newsfeed starts here */
+	.newsfeed_ques{
+	border-bottom: 1px solid #D1D1D1;
+	border:1px solid #E5F5DB;
+	background-color: #FFFFFF;
+	border-radius: 4px;
+	margin-bottom: 5px !important;
+	}
+	.newsfeedbody{
+		background-color: #FAFAFA !important;
+	}
+	/* styling for newsfeed starts here */
+}
+
+/* common styling for mobile and desktop starts */
+/* styling for index page starts here */
+.fbloginbtn{
+	background-color: #3B5998;
+	height: 40px;
+	width: 250px;
+	border-radius: 5px;
+	border: #221F1F;
+	margin-left: 20%;
+	font-family: myFirstFont;
+	font-size: 110% !important;
+}
+.fblogo{
+	color: white;
+	height: 10px;
+	width: 10px;
+	margin-right: 5px;
+}
+.fblogin{
+	color: white;
+}
+.fblogin:hover{
+	color: white;
+	text-decoration: none;
+}
+.slide{
+	border: 0px !important;
+}
+.welcome-text{
+	background-color: #221F1F;
+}
+.website-title{
+	color: #F7F7F7;
+	font-family: myFirstFont;
+	margin-left: 10% !important;
+}
+.title{
+	color: #F7F7F7;
+	font-family: myFirstFont;
+	font-size: 450% !important;
+	margin-left: 20% !important;
+}
+.subtext{
+	color: #F7F7F7;
+	font-family: myFirstFont;
+	margin-left: 10% !important;
+	font-size: 110% !important;
+}
+li{
+	font-family: myFirstFont;
+}
+/* styling for index page ends here */
+/* newsfeed page common styling starts here*/
+
+
+.userdetails_newsfeed{
+	color: grey !important;
+}
+.newsfeed_options{
+	width: 100% !important;
+	height: 40px !important;
+	border-radius: 3px !important;
+	margin-bottom: 10px !important;
+}
+.newsfeed_optvalue{
+	background-color: #66b3ff !important;
+	border-radius: 3px !important;
+	height: 100% !important;
+	padding-top: 2% !important;
+	min-width: 20px !important;
+	max-width: 100% !important;
+}
+.newsfeed_opttext{
+	position:relative;
+    bottom:30px;
+}
+.newsfeed_links{
+	color: #4A4A4A !important;
+
+}
+.newsfeed_links:hover{
+	text-decoration: none;
+}
+
+/* newsfeed page common styling ends here*/
+/* styling for createpoll starts here */
+.crpollinp{
+	height: 100px !important;
+}
+.navbar-inverse{
+	border-radius : 0px !important;
+}
+.form3{
+	visibility: hidden;
+	display: none;
+}
+.form4{
+	visibility: hidden;
+	display: none;
+}
+/* styling for createpoll ends here */
+/* common styling for mobile and desktop ends */
+</style>
+</head>
+
+
+ 
+{% block headercontents %}
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+
+
+</html>
